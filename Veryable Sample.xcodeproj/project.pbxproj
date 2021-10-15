@@ -8,7 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		09F5497A5315486D756C4212 /* Pods_Veryable_Sample.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CDFCC6589E8234DDBAFB6174 /* Pods_Veryable_Sample.framework */; };
-		501EE72327190F1B00FEC936 /* dummy-data.json in Resources */ = {isa = PBXBuildFile; fileRef = 501EE72227190F1B00FEC936 /* dummy-data.json */; };
+		501EE7252719123900FEC936 /* dummy-data.json in Resources */ = {isa = PBXBuildFile; fileRef = 501EE7242719123900FEC936 /* dummy-data.json */; };
 		515EC6B3242E5FBA00B21DBB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 515EC6B2242E5FBA00B21DBB /* AppDelegate.swift */; };
 		515EC6BC242E5FBC00B21DBB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 515EC6BB242E5FBC00B21DBB /* Assets.xcassets */; };
 		6A948AE5265FEFCB005A22DA /* AccountListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A948AE4265FEFCB005A22DA /* AccountListViewController.swift */; };
@@ -23,7 +23,7 @@
 
 /* Begin PBXFileReference section */
 		0EB0BA61D6219763814275CA /* Pods-Veryable Sample.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Veryable Sample.debug.xcconfig"; path = "Target Support Files/Pods-Veryable Sample/Pods-Veryable Sample.debug.xcconfig"; sourceTree = "<group>"; };
-		501EE72227190F1B00FEC936 /* dummy-data.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "dummy-data.json"; sourceTree = "<group>"; };
+		501EE7242719123900FEC936 /* dummy-data.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = "dummy-data.json"; path = "../../../../../../../Desktop/dummy-data.json"; sourceTree = "<group>"; };
 		515EC6AF242E5FBA00B21DBB /* Veryable Sample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Veryable Sample.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		515EC6B2242E5FBA00B21DBB /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		515EC6BB242E5FBC00B21DBB /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -136,7 +136,7 @@
 		6A948AEA265FF01C005A22DA /* Resources */ = {
 			isa = PBXGroup;
 			children = (
-				501EE72227190F1B00FEC936 /* dummy-data.json */,
+				501EE7242719123900FEC936 /* dummy-data.json */,
 				515EC6BB242E5FBC00B21DBB /* Assets.xcassets */,
 				515EC6C3242E5FBC00B21DBB /* Info.plist */,
 			);
@@ -238,8 +238,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				501EE72327190F1B00FEC936 /* dummy-data.json in Resources */,
 				515EC6BC242E5FBC00B21DBB /* Assets.xcassets in Resources */,
+				501EE7252719123900FEC936 /* dummy-data.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
