@@ -60,7 +60,7 @@ class AccountListView: UIView, UITableViewDelegate, UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath)
-        cell.textLabel?.text = AccountListView.accounts[1][indexPath.row].desc
+        cell.textLabel?.text = AccountListView.accounts[indexPath.section][indexPath.row].desc
         return cell
     }
     
