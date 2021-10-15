@@ -1,0 +1,32 @@
+[
+    {
+        "name": "WF Checking Account",
+        "account": "Wells Fargo (x2356)",
+        "type": "Bank Account"
+    },
+    {
+        "name": "Chase Savings Account",
+        "account": "Chase (x6743)",
+        "type": "Bank Account"
+    },
+    {
+        "name": "BOA Checking Account",
+        "account": "Bank of America (x3833)",
+        "type": "Bank Account"
+    },
+    {
+        "name": "WF Debit Card",
+        "account": "VISA (x4363)",
+        "type": "Card"
+    },
+    {
+        "name": "Chase Credit Card",
+        "account": "MASTER CARD (x6853)",
+        "type": "Card"
+    },
+    {
+        "name": "Wells Fargo Credit Card",
+        "account": "VISA (x2234)",
+        "type": "Card"
+    }
+]
