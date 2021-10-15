@@ -59,13 +59,27 @@ class AccountListView: UIView, UITableViewDelegate, UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath)
-        cell.textLabel?.text = AccountListView.accounts[indexPath.section][indexPath.row].desc
+        let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath) as! CustomTableViewCell
+        cell.accessoryType = .disclosureIndicator
+        if indexPath.section == 0 {
+            cell.accountImg.image = UIImage(named: "bank")?.withRenderingMode(.alwaysTemplate)
+            cell.accountType.text = "Bank Account: ACH - Same Day"
+        }
+        else {
+            cell.accountImg.image = UIImage(named: "card")?.withRenderingMode(.alwaysTemplate)
+            cell.accountType.text = "Card: Instant"
+        }
+        cell.accountName.text = AccountListView.accounts[indexPath.section][indexPath.row].account_name
+        cell.accountDesc.text = AccountListView.accounts[indexPath.section][indexPath.row].desc
         return cell
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         print("Selected " + String(indexPath.row) + " row")
+    }
+    
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return 100
     }
     
     //MARK: Private members
