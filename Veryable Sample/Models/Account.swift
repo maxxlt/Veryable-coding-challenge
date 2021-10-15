@@ -12,4 +12,8 @@ struct Account : Codable {
     let name: String
     let account: String
     let type: String
+    
+    public func getName() -> String{
+        return name
+    }
 }

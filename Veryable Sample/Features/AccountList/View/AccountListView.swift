@@ -12,10 +12,10 @@ import SnapKit
 
 protocol AccountListDelegate: AnyObject {}
 
-class AccountListView: UIView {
+class AccountListView: UIView, UITableViewDelegate, UITableViewDataSource {
 
     //MARK: Public API
-
+    private let accounts: [Account] = AccountRepo.getAccountList()
     //MARK: Inits
     init(delegate: AccountListDelegate) {
         self.del = delegate
@@ -26,18 +26,32 @@ class AccountListView: UIView {
 
     private func setup() {
         backgroundColor = ViewColor.background.color
-
+        tableView.delegate = self
+        tableView.dataSource = self
+        addSubview(tableView)
         constrain()
     }
 
     private func constrain() {
-        helloLabel.snp.makeConstraints {
-            $0.center.equalTo(self)
+        tableView.snp.makeConstraints {
+            $0.left.equalToSuperview().offset(0)
+            $0.right.equalToSuperview().offset(0)
+            $0.top.equalToSuperview().offset(0)
+            $0.bottom.equalToSuperview().offset(0)
         }
     }
 
     //MARK: Overrides
-
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return accounts.count
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath)
+        cell.textLabel?.text = accounts[indexPath.row].getName()
+        return cell
+    }
+    
     //MARK: Private members
     private weak var del: AccountListDelegate?
 
@@ -49,5 +63,11 @@ class AccountListView: UIView {
         label.font = .vryAvenirNextDemiBold(16)
         addSubview(label)
         return label
+    }()
+    
+    private lazy var tableView: UITableView = {
+        let table = UITableView(frame: .zero, style: .grouped)
+        table.register(UITableViewCell.self, forCellReuseIdentifier: "cell")
+        return table
     }()
 }
