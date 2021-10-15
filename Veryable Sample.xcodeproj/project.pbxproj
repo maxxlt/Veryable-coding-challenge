@@ -13,6 +13,7 @@
 		501EE72B27192EB000FEC936 /* VColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 501EE72827192EB000FEC936 /* VColor.swift */; };
 		501EE72C27192EB000FEC936 /* ViewColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 501EE72927192EB000FEC936 /* ViewColor.swift */; };
 		501EE72D27192EB000FEC936 /* VryPallete.swift in Sources */ = {isa = PBXBuildFile; fileRef = 501EE72A27192EB000FEC936 /* VryPallete.swift */; };
+		50415C352719459700BAA4C2 /* CustomTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50415C342719459700BAA4C2 /* CustomTableViewCell.swift */; };
 		515EC6B3242E5FBA00B21DBB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 515EC6B2242E5FBA00B21DBB /* AppDelegate.swift */; };
 		515EC6BC242E5FBC00B21DBB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 515EC6BB242E5FBC00B21DBB /* Assets.xcassets */; };
 		6A948AE5265FEFCB005A22DA /* AccountListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A948AE4265FEFCB005A22DA /* AccountListViewController.swift */; };
@@ -29,6 +30,7 @@
 		501EE72827192EB000FEC936 /* VColor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = VColor.swift; path = "Veryable Sample/VryCustom/Fonts/VColor.swift"; sourceTree = SOURCE_ROOT; };
 		501EE72927192EB000FEC936 /* ViewColor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ViewColor.swift; path = "Veryable Sample/VryCustom/Fonts/ViewColor.swift"; sourceTree = SOURCE_ROOT; };
 		501EE72A27192EB000FEC936 /* VryPallete.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = VryPallete.swift; path = "Veryable Sample/VryCustom/Fonts/VryPallete.swift"; sourceTree = SOURCE_ROOT; };
+		50415C342719459700BAA4C2 /* CustomTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTableViewCell.swift; sourceTree = "<group>"; };
 		515EC6AF242E5FBA00B21DBB /* Veryable Sample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Veryable Sample.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		515EC6B2242E5FBA00B21DBB /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		515EC6BB242E5FBC00B21DBB /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -115,6 +117,7 @@
 			isa = PBXGroup;
 			children = (
 				6A948AE6265FEFDA005A22DA /* AccountListView.swift */,
+				50415C342719459700BAA4C2 /* CustomTableViewCell.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -305,6 +308,7 @@
 				501EE72D27192EB000FEC936 /* VryPallete.swift in Sources */,
 				501EE72B27192EB000FEC936 /* VColor.swift in Sources */,
 				6A948AEC265FF0A2005A22DA /* AccountRepo.swift in Sources */,
+				50415C352719459700BAA4C2 /* CustomTableViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

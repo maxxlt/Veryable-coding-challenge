@@ -52,6 +52,10 @@ class AccountListView: UIView, UITableViewDelegate, UITableViewDataSource {
         return cell
     }
     
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        print("Selected " + String(indexPath.row) + " row")
+    }
+    
     //MARK: Private members
     private weak var del: AccountListDelegate?
 
@@ -67,7 +71,7 @@ class AccountListView: UIView, UITableViewDelegate, UITableViewDataSource {
     
     private lazy var tableView: UITableView = {
         let table = UITableView(frame: .zero, style: .grouped)
-        table.register(UITableViewCell.self, forCellReuseIdentifier: "cell")
+        table.register(CustomTableViewCell.self, forCellReuseIdentifier: "cell")
         return table
     }()
 }
