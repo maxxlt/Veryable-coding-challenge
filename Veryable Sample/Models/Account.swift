@@ -8,12 +8,9 @@
 
 import Foundation
 
-struct Account : Codable {
-    let name: String
-    let account: String
-    let type: String
-    
-    public func getName() -> String{
-        return name
-    }
+struct Account : Decodable {
+    let id: Int
+    let account_type: String
+    let account_name: String
+    let desc: String
 }

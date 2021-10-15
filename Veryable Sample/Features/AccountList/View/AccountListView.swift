@@ -15,7 +15,10 @@ protocol AccountListDelegate: AnyObject {}
 class AccountListView: UIView, UITableViewDelegate, UITableViewDataSource {
 
     //MARK: Public API
-    private let accounts: [Account] = AccountRepo.getAccountList()
+    func refreshtable(){
+        AccountRepo.getAccountList(tableView: self.tableView)
+    }
+    
     //MARK: Inits
     init(delegate: AccountListDelegate) {
         self.del = delegate
@@ -30,6 +33,7 @@ class AccountListView: UIView, UITableViewDelegate, UITableViewDataSource {
         tableView.dataSource = self
         addSubview(tableView)
         constrain()
+        refreshtable()
     }
 
     private func constrain() {
@@ -42,13 +46,21 @@ class AccountListView: UIView, UITableViewDelegate, UITableViewDataSource {
     }
 
     //MARK: Overrides
+    func numberOfSections(in tableView: UITableView) -> Int {
+        return AccountListView.accounts.count
+    }
+    
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return accounts.count
+        return AccountListView.accounts[section].count
+    }
+    
+    func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
+        return headerTitles[section]
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath)
-        cell.textLabel?.text = accounts[indexPath.row].getName()
+        cell.textLabel?.text = AccountListView.accounts[1][indexPath.row].desc
         return cell
     }
     
@@ -58,6 +70,8 @@ class AccountListView: UIView, UITableViewDelegate, UITableViewDataSource {
     
     //MARK: Private members
     private weak var del: AccountListDelegate?
+    public static var accounts = [[Account]]()
+    private let headerTitles = ["Bank Accounts", "Cards"]
 
     //MARK: Lazy Loads
     private lazy var helloLabel: UILabel = {
