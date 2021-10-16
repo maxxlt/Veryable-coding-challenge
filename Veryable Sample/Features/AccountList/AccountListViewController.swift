@@ -33,5 +33,8 @@ class AccountListViewController: UIViewController {
 }
 
 extension AccountListViewController: AccountListDelegate {
-
+    func openDetailView(data: Account) {
+        let detailVieweController = DetailViewController(account: data)
+        self.navigationController?.pushViewController(detailVieweController, animated: true)
+    }
 }

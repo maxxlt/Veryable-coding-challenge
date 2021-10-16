@@ -10,7 +10,9 @@ import Foundation
 import UIKit
 import SnapKit
 
-protocol AccountListDelegate: AnyObject {}
+protocol AccountListDelegate: AnyObject {
+    func openDetailView(data: Account)
+}
 
 class AccountListView: UIView, UITableViewDelegate, UITableViewDataSource {
 
@@ -75,7 +77,7 @@ class AccountListView: UIView, UITableViewDelegate, UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        print("Selected " + String(indexPath.row) + " row")
+        self.del?.openDetailView(data: AccountListView.accounts[indexPath.section][indexPath.row])
     }
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
