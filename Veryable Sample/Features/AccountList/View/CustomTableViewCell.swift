@@ -31,7 +31,7 @@ class CustomTableViewCell: UITableViewCell {
         self.addSubview(accountName)
         accountName.snp.makeConstraints { (make) in
             make.leading.equalTo(accountImg.snp.trailing).offset(16)
-            make.topMargin.equalToSuperview().offset(16)
+            make.topMargin.equalToSuperview().offset(22)
         }
         accountDesc.font = UIFont.vryAvenirNextRegular(12)
         self.addSubview(accountDesc)
@@ -40,6 +40,7 @@ class CustomTableViewCell: UITableViewCell {
             make.topMargin.equalTo(accountName.snp.bottom).offset(8)
         }
         accountType.font = UIFont.vryAvenirNextRegular(12)
+        accountType.textColor = VGrey.light.color
         self.addSubview(accountType)
         accountType.snp.makeConstraints { (make) in
             make.leading.equalTo(accountImg.snp.trailing).offset(16)
