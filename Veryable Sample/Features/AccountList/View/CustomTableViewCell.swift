@@ -28,12 +28,14 @@ class CustomTableViewCell: UITableViewCell {
             make.top.left.equalTo(22)
         }
         accountName.font = UIFont.vryAvenirNextDemiBold(14.0)
+        accountName.textColor = VGrey.normal.color
         self.addSubview(accountName)
         accountName.snp.makeConstraints { (make) in
             make.leading.equalTo(accountImg.snp.trailing).offset(16)
             make.topMargin.equalToSuperview().offset(22)
         }
         accountDesc.font = UIFont.vryAvenirNextRegular(12)
+        accountDesc.textColor = VGrey.normal.color
         self.addSubview(accountDesc)
         accountDesc.snp.makeConstraints { (make) in
             make.leading.equalTo(accountImg.snp.trailing).offset(16)
