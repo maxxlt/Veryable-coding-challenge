@@ -22,7 +22,7 @@ class CustomTableViewCell: UITableViewCell {
     
     func configure() {
         accountImg.contentMode = .scaleToFill
-        accountImg.tintColor = VBlue.normal.color
+        accountImg.tintColor = VBlue.dark.color
         self.addSubview(accountImg)
         accountImg.snp.makeConstraints{ (make) in
             make.top.left.equalTo(22)

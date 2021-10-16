@@ -35,6 +35,10 @@ class DetailViewController: UIViewController {
 }
 
 extension DetailViewController: DetailDelegate {
+    func backButton() {
+        self.navigationController?.popViewController(animated: true)
+    }
+    
     func getData() -> Account {
         return account!
     }
